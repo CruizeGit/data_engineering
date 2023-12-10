@@ -1,0 +1,73 @@
+{% extends "layout_csv_user.html" %}
+
+{% block title %}
+  Upload CSV
+{% endblock %}
+
+{% block main %}
+  <div class="charts-row">
+    <h2>Upload the CSV Template</h2>
+    <form action="/upload_user" method="POST" enctype="multipart/form-data">
+
+        <div class="mb-3">
+        <label for="file" class="form-label">Select CSV File</label>
+        <input type="file" class="form-control" id="file" name="file" accept=".csv" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Upload CSV</button>
+    </form>
+  </div>
+
+  <div class="margin_space"></div>
+  <div class="text-row">
+  <div class="mb-3 mt-3">
+    <h3>Bulk Add Expenses Instructions:</h3>
+    <p class="center-aligned mt-3 mb-3">
+        <span class="italize_things bold-date">"As our user, Cruize let's you streamline your expense management by uploading a CSV file directly to our platform and let us transform your data into a clear and insightful dashboard."</span>
+    </p>
+
+    <p class="left-aligned">
+      In order to do so, the CSV file should follow a <span class="bold-date">predefined template</span> with the following columns:
+    </p>
+
+    <p class="left-aligned">
+      1) **Date:** Represents the date you made the expense. Use the format <span class="bold-date">dd/mm/yyyy</span>.
+    </p>
+
+    <p class="left-aligned">
+      2) **Name:** A label or name for your expense. You can put any labels/names you want to symbolize the expense(s) you listed.
+    </p>
+
+    <p class="left-aligned">
+      3) **Category:** Choose from the following categories:
+    </p>
+        <ul class="left-aligned-list">
+        <li>- Rent</li>
+        <li>- Transportation</li>
+        <li>- Food</li>
+        <li>- Utilities</li>
+        <li>- Healthcare</li>
+        <li>- Savings</li>
+        <li>- Personal Spending</li>
+        <li>- Recreation and Entertainment</li>
+        <li>- Insurance and Investing</li>
+        <li>- Miscellaneous</li>
+        </ul>
+    <p class="left-aligned">
+      4) **Cost:** The numerical or decimal value of your expense.
+    </p>
+
+    <p class="left-aligned">
+        <span class="bold-date">Note: All columns must have values. You should not left anything blank.
+    </p>
+
+    <p class="left-aligned">
+        <span class="italize_things">Here's a link to the budget template file with a sample row of data to serve as a guide:</span>
+    </p>
+
+    <p class="left-aligned">
+    <a href="https://drive.google.com/file/d/18kanlS7lVHZ6_YIl8j0VaHuoxuw5vJOx/view?usp=sharing">Download Template</a>
+    </p>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "luser.html" %}
+
+{% block title %}
+    Manual Data
+{% endblock %}
+
+{% block main %}
+    <div class="container-fluid">
+        <div class="row test-row custom_padding">
+            <div class="col-md-12">
+                <h2>Add an Expense</h2>
+            <!-- TODO: Create a form for users to submit a name, a month, and a day -->
+                <form action ="/add" method="POST">
+                    <input autocomplete="off" autofocus name="date" placeholder="Date" type="date">
+                    <input autocomplete="off" autofocus name="name" placeholder="My Expense" type="text">
+                    <select name="category">
+                        <option disabled selected>Category</option>
+                        {% for category in categories %}
+                            <option value="{{ category }}">{{category}}</option>
+                        {% endfor %}
+                    </select>
+                    <input autocomplete="off" autofocus name="amount" placeholder="Amount" type="text">
+                    <button  class="btn btn-primary" type="Submit">Cruize It</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class ="row charts-row custom_padding">
+            <div class = "col-md-12">
+                <h2>My Expenses</h2>
+                <table class="table table-sortable">
+                    <thead>
+                        <tr>
+                            <th>Spending Date (yyyy-mm-dd)</th>
+                            <th>My Expenses</th>
+                            <th>Category</th>
+                            <th>Amount</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for budget in budgets %}
+                        <tr>
+                            <td>{{ budget.budget_date }}</td>
+                            <td>{{ budget.name }}</td>
+                            <td>{{ budget.category }}</td>
+                            <td>{{ budget.amount }}</td>
+                            <td><input type="checkbox" class="checkbox" data-id="{{ budget.id }}">Delete</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <button  id="delete-btn" class="btn btn-primary">Delete Expenses</button>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

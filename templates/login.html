@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+	<div class="container">
+		<form action="/login" class="form" method="post">
+		<h2>LOG IN</h2>
+			<input autocomplete ="off" type="text" id= "username" name="username" class="box" placeholder="Enter username">
+			<input type="password" name="password" id="password" class="box" placeholder = "Enter password" type="password">
+			<input type="submit" value="Log In" id="submit">
+
+			<a href={{url_for('change_password')}}>Forget Password?</a>
+			<a href={{url_for('flatfile.upload_csv_guest')}}>Continue as Guest</a>
+		</form>
+
+		<div class="side">
+			<img src="/static/Original.png" alt="">
+		</div>
+
+
+	</div>
+
+{% endblock %}

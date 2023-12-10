@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <form action="/register" method="post" class="form">
+            <h2>REGISTER</h2>
+                <input autocomplete="off" autofocus class="box" id="username" name="username" placeholder="Username" type="text">
+                <input class="box" id="password" name="password" placeholder="Password" type="password">
+                <input class="box" id="confirmation" name="confirmation" placeholder="Password (Again)" type="password">
+                <input type="submit" value="Register" id="submit">
+        </form>
+
+        <div class="side">
+			<img src="/static/Original.png" alt="">
+		</div>
+
+    </div>
+{% endblock %}

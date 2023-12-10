@@ -1,0 +1,92 @@
+{% extends "luser.html" %}
+
+{% block title %}
+    My Dashboard
+{% endblock %}
+
+{% block main %}
+        <div class="row test-row">
+            <div class="col-md-12">
+            <h3>Filter Date Range or Categories</h3>
+                <form method="post" action="{{ url_for('dashboard.dashboard_data') }}">
+                    <div class="mb-3">
+                        {% for category in categories %}
+                            <input type="checkbox" id="{{category}}" name="categories" value="{{category}}">
+                            <label for="{{category}}">{{category}}</label>
+                        {% endfor %}
+                    </div>
+                    <div>
+                        <label for="start_date">Start Date:</label>
+                        <input type="date" name="start_date" placeholder="yyyy-mm-dd" required>
+                    </div>
+                    <div>
+                        <label for="end_date">End Date:</label>
+                        <input type="date" name="end_date" placeholder="yyyy-mm-dd" required>
+                    </div>
+                    <div class="mt-3">
+                        <button type="submit" class="btn btn-primary">Apply Filter</button>
+                        <!-- <input type="submit" value="Filter"> -->
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    <div class="row charts-row" >
+        <div class="col-6 mx-auto">
+            <div id="chart1"></div>
+        </div>
+
+        <div class="col-6 mx-auto">
+            <div id="chart2"></div>
+        </div>
+    </div>
+
+    <div class="row charts-row" >
+        <div class="col-12 mx-auto">
+            <div id="chart7"></div>
+        </div>
+    </div>
+
+
+    <div class="row charts-row" >
+        <div class="col-6 mx-auto">
+            <div id="chart5"></div>
+        </div>
+
+        <div class="col-6 mx-auto">
+            <div id="chart6"></div>
+        </div>
+    </div>
+
+    <div class="row custom-row" >
+        <div class="col-12 mx-auto">
+            <div id="chart3"></div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script type="text/javascript">
+        var graphs1 = {{ graph1JSON | safe}};
+        Plotly.plot("chart1", graphs1,{});
+
+        var graphs2 = {{ graph2JSON | safe}};
+        Plotly.plot("chart2", graphs2,{});
+
+        var graphs3 = {{ graph3JSON | safe}};
+        Plotly.plot("chart3", graphs3,{});
+
+        var graphs5 = {{ graph5JSON | safe}};
+        Plotly.plot("chart5", graphs5,{});
+
+        var graphs6 = {{ graph6JSON | safe}};
+        Plotly.plot("chart6", graphs6,{});
+
+        var graphs7 = {{ graph7JSON | safe}};
+        Plotly.plot("chart7", graphs7,{});
+
+
+    </script>
+
+{% endblock %}

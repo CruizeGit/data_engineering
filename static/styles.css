@@ -1,0 +1,185 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+.section {
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+}
+
+
+table {
+    background-color: transparent;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+table th,
+table td {
+    padding: 0.75rem;
+    vertical-align: middle;
+}
+
+/*styling for sortable columns*/
+.table-sortable th {
+    cursor: pointer;
+}
+
+.table-sortable .th-sort-asc::after {
+    content: "\25b4";
+}
+
+.table-sortable .th-sort-desc::after {
+    content: "\25be";
+}
+
+.table-sortable .th-sort-asc::after,
+.table-sortable .th-sort-desc::after {
+    margin-left: 5px;
+}
+
+.table-sortable .th-sort-asc,
+.table-sortable .th-sort-desc {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #ABABAB;
+}
+/*Container*/
+.container {
+	display: flex;
+	height: 500px;
+	width: 800px;
+	/*border: 1px solid black; */
+	margin: auto;
+	margin-top: 50px;
+}
+
+/*Login Form*/
+.form {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	align-items: center;
+	background-color: whitesmoke;
+}
+
+.form h2 {
+	font-size: 3rem;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	margin: 40px;
+}
+
+.form h3 {
+	font-size: 2rem;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	margin: 40px;
+}
+
+.box {
+	padding: 12px;
+	width: 65%;
+	margin: 15px;
+	border: 1px solid black;
+	outline: none;
+	border-radius: 20px;
+}
+
+.pass-box {
+	padding: 8px;  /*height*/
+	width: 50%;
+	margin: 10px 0;
+	border: 1px solid black;
+	outline: none;
+	border-radius: 20px;
+}
+
+#submit {
+	padding: 12px 30px;
+	width: 40%;
+	margin-top: 40px;
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	outline: none;
+	border: none;
+	border-radius: 20px;
+}
+
+
+#submit:hover {
+	cursor: pointer;
+	background-color: #ff9f00;
+}
+
+#submit-pass {
+	padding: 12px 30px;
+	width: 60%;
+	margin-top: 40px;
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	outline: none;
+	border: none;
+	border-radius: 20px;
+}
+
+#submit-pass:hover {
+	cursor: pointer;
+	background-color: #ff9f00;
+}
+
+.form a{
+	text-decoration: none;
+	color: black;
+	margin-top: 20px;
+
+}
+
+.form a:hover{
+	color: #C0362C;
+
+}
+
+
+/*Right Side Image*/
+.side {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+}
+
+.side img {
+	width: 400px;
+	height: 500px;
+}

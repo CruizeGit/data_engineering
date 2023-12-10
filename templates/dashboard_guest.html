@@ -1,0 +1,79 @@
+{% extends "lguest.html" %}
+
+{% block title %}
+    Guest Dashboard
+{% endblock %}
+
+{% block main %}
+    <div class="filter-row">
+            <div class="col-md-12">
+            <h3>Filter Date Range or Categories</h3>
+                <form method="post" action="{{ url_for('dashboard.dashboard_guest_func') }}">
+                    <div class="mt-3 mb-3">
+                        {% for category in categories %}
+                            <input type="checkbox" id="{{category}}" name="categories" value="{{category}}">
+                            <label for="{{category}}">{{category}}</label>
+                        {% endfor %}
+                    </div>
+                    <div>
+                        <label for="start_date">Start Date:</label>
+                        <input type="date" name="start_date" placeholder="yyyy-mm-dd" required>
+                    </div>
+                    <div>
+                        <label for="end_date">End Date:</label>
+                        <input type="date" name="end_date" placeholder="yyyy-mm-dd" required>
+                    </div>
+                    <div class="mt-3">
+                        <button type="submit" class="btn btn-primary">Apply Filter</button>
+                        <!-- <input type="submit" value="Filter"> -->
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    <div class="row charts-row" >
+        <div class="col-6 mx-auto">
+            <div id="chart1"></div>
+        </div>
+
+        <div class="col-6 mx-auto">
+            <div id="chart2"></div>
+        </div>
+    </div>
+
+    <div class = "charts-row">
+        <h2>All Expenses</h2>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Spending Date (yyyy-mm-dd)</th>
+                <th scope="col">My Expenses</th>
+                <th scope="col">Category</th>
+                <th scope="col">Amount</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                {% for budget in budgets %}
+              <tr>
+                <th scope="row">{{ budget.budget_date }}</th>
+                <td>{{ budget.name }}</td>
+                <td>{{ budget.category }}</td>
+                <td>{{ budget.amount }}</td>
+              </tr>
+                 {% endfor %}
+            </tbody>
+          </table>
+    </div>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script type="text/javascript">
+        var graphs1 = {{ graph1JSON | safe}};
+        Plotly.plot("chart1", graphs1,{});
+
+        var graphs2 = {{ graph2JSON | safe}};
+        Plotly.plot("chart2", graphs2,{});
+
+    </script>
+
+{% endblock %}
