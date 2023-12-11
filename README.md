@@ -19,38 +19,45 @@ https://drive.google.com/file/d/18kanlS7lVHZ6_YIl8j0VaHuoxuw5vJOx/view
 
 Expense categories include rent, transportation, food, utilities, healthcare, savings, personal spending, recreation and entertainment, insurance and investing, and miscellaneous. It is crucial for guests to choose from these categories to ensure a smooth upload process. Following a successful upload, a dashboard is generated, presenting the user's expenses in a tabular format. Exiting the guest page results in the deletion of all guest data, including any generated dashboards.
 
-| Login | Adopt |
+| Guest Initial Page |
+|:-------------------:|
+|<img src="screenshots/guest_upload.png" width="1000" height="500">|
+
+| Guest Dashboard |
+|:-------------------:|
+|<img src="screenshots/guest_dashboard.png" width="1000" height="500">|
+
+### Member Access
+
+Members are afforded two options for uploading data – manual entry or utilizing the template introduced to guests. Data belonging to members is always saved, with the provision to delete specific records at their discretion. The member's expense table can be sorted by column, and a dedicated page showcases all dashboards and charts.
+
+| Bulk Add | Manual Add |
 | :---: | :---: |
-| <img src="Screenshots/img1.png" width="400">  | <img src="Screenshots/img3adopt.png" width="400">|
+| <img src="screenshots/bulk_user_edited.png" width="500">  | <img src="screenshots/manual_add_edited.png" width="500">|
 
-#### Description:
-Background:
-Cruize: Your Budgeting Buddy is a website that allows users to track their financial expenses through colorful visualizations such as charts and dashboards. Like in some modern website, a user has a choice to be a member(paid susbscription) or be a guest(trial subscription).
+Member's homepage will default to current month for the date range and categories to all.
 
-Being a guest has limited access to the website. Upon clicking the 'Continue as a Guest' in login page, he will be redirected to a site that lets him upload his data via entering a username(just any name you would like, e.g. user2561) and a textbox that browse through his desktop that searches for a csv file. Note that this csv file is pre-defined and downloadale via a google drive link.
+| Homepage1 | Homepage2 | Homepage3  |
+| :---: | :---: | :---: |
+| <img src="screenshots/homepage1.png" width="500">  | <img src="screenshots/homepage2.png" width="500">| <img src="screenshots/homepage3.png" width="500">|
 
-In order to process, here are the columns included - date (follows format of dd/mm/yyyy), name (basically just a label for your expenses), category(rent, transportation, food, utilities, healthcare, savings, personal spending, recreation and entertainment, insurance and investing, miscellaneous), and cost (numerical/decimal value of your expense). Note that the choices for categories (as well as the additonal rules) must be followed to avoid errors. For categories, guests just need to make a decision to which category they seem their expenses to fit in.
+Using Date Range (October 1 to December 31, 2023)
+| Date Range and Category Filter |
+|:-------------------:|
+|<img src="screenshots/filter1.png" width="1000" height="500">|
 
-After uploading successfully, guest will be presented with a dashboard that shows his/her expenses and a table. Upon exiting the guest page, all of the guest's data will be deleted, including the dashboards generated.
+| Date Range and Category Filter |
+|:-------------------:|
+|<img src="screenshots/filter2.png" width="1000" height="500">|
 
-For the member, it has two ways of uploading the data, it can be either done manually (one expense at a time), or through the same template that the guest followed. Given that member follows the rule mentioned above, but his/her  will always be saved unless the member has an option to choose to delete certain record(s). The member's table of expenses can also be sorted via a column. A member also has a separate page just for all the dashboards and charts.
+### Dashboard Filters
+Both guests and members have the ability to filter data based on date range (start and end date) and specific categories. Opting not to select any categories defaults to displaying all categories. The application ensures a seamless and error-free experience when handling expense data.
 
-Dashboard Filters - both guest and member have a filter on date range(start date and end date) as well as the categories. By not choosing any categories will set to default(that's right, all categories) or if by preference you can just choose categories that you want to focus on(personal spending and savings, etc.).
+## Contribution
 
-Logo is a paid design from WiX Logo
+Your contributions will be greatly appreciated! Kindly refer to the [contribution guidelines](CONTRIBUTING.md) :tada:
 
-Source Files:
-app.py >> contains all routes such as login, password reset, logout, registration, dashboard, guest_exit
-dashboard.py >> contains all the logic for dashboard implementation
-flatfile.py >> contans all the logic for processing of the template file(csv file)
-helpers.py >> derived from CS50 week 9, used the functions for login_required and apology
-budget.db >> database for the impelementation of Cruize (includes all data for guest and members)
-template folder >> location of all the layout file and html files
-static folder >> contains all the css, images, and js files used
+## Licenses
+This is part of CS50x course final project. Logo is a paid designd from Wix.
 
-Technology Stack:
-Frontend- JavaScript, HTML, CSS, Bootstrap
-Backend - Flask
-Libraries - Python's Pandas, Plotly Express
-Database - CS50's sqlite DB
 
