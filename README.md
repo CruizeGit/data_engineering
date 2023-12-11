@@ -1,7 +1,7 @@
 # CRUIZE: Your Budgeting Buddy
 <img src="/static/Original.png" width="1000" height="450">
 
-![Static Badge](https://img.shields.io/badge/python-test?style=for-the-badge&logo=python&labelColor=black&color=%23ffd343) ![Static Badge](https://img.shields.io/badge/html-test?style=for-the-badge&logo=HTML5&labelColor=black&color=%23E34F26) ![Static Badge](https://img.shields.io/badge/css-test?style=for-the-badge&logo=CSS3&labelColor=black&color=%231572B6) ![Static Badge](https://img.shields.io/badge/css-test?style=for-the-badge&logo=JavaScript&labelColor=black&color=%23F7DF1E) ![Static Badge](https://img.shields.io/badge/pandas-test?style=for-the-badge&logo=pandas&labelColor=black&color=%23150458) ![Static Badge](https://img.shields.io/badge/plotly-test?style=for-the-badge&logo=Plotly&labelColor=black&color=%233F4F75)
+![Static Badge](https://img.shields.io/badge/python-test?style=for-the-badge&logo=python&labelColor=black&color=%23ffd343) ![Static Badge](https://img.shields.io/badge/html-test?style=for-the-badge&logo=HTML5&labelColor=black&color=%23E34F26) ![Static Badge](https://img.shields.io/badge/css-test?style=for-the-badge&logo=CSS3&labelColor=black&color=%231572B6) ![Static Badge](https://img.shields.io/badge/javascript-test?style=for-the-badge&logo=javascript&labelColor=black&color=%23F7DF1E) ![Static Badge](https://img.shields.io/badge/pandas-test?style=for-the-badge&logo=pandas&labelColor=black&color=%23150458) ![Static Badge](https://img.shields.io/badge/plotly-test?style=for-the-badge&logo=Plotly&labelColor=black&color=%233F4F75)
 
 ## Installation
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install libraries such as flask, pandas, plotly and cs50 sqlite
